@@ -1,0 +1,15 @@
+{
+  "name": "weeb-smp-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website for WeebSMP",
+  "main": "index.html",
+  "author": "NullDev // Lz_",
+  "keywords": ["weebsmp", "weeb", "smp", "minecraft", "server", "minecraft server", "Survival Server", "minecraft Surival server", "no hacking",],
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/eslint-parser": "^7.14.7",
+    "eslint": "^7.31.0"
+  }
+}

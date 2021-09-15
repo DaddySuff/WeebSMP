@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/**
+ * Copyright (c) NullDev
+ */
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden !important;
+    font-family: 'Lato', sans-serif;
+    background: #0E0E0E;
+}
+
+.bg {
+    background: url("../img/spawn.png") center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: filter 1s ease-in;
+}
+
+body.loaded .bg {
+    filter: blur(8px) brightness(0.6);
+}
+
+#pjs {
+    z-index: 100;
+}
+
+#main {
+    z-index: 10;
+}
+
+#pjs, #main {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#pjs, #main {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.z1, .z2 {
+    position: relative;
+}
+
+.z1 {
+    z-index: 1;
+}
+
+.z2 {
+    z-index: 2;
+}
+
+div.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 400px;
+    width: 33vw;
+    color: #FFF;
+    z-index: 50;
+    text-align: center;
+    padding: 2em;
+    background: rgba(0, 0, 0, .6);
+    border-radius: 30px;
+}
+
+@supports ((-webkit-backdrop-filter: blur(50px)) or (backdrop-filter: blur(50px))) {
+    div.content {
+        backdrop-filter: blur(50px) brightness(1.9);
+        background: transparent !important;
+    }
+}
+
+div.content > .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.content > .heading img {
+    height: 150px;
+    width: auto;
+    pointer-events: none;
+    margin-right: 15px;
+}
+
+div.content > .heading > h1 {
+    font-size: 2.5em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    margin-left: 15px;
+    text-align: left;
+}
+
+div.content h2 {
+    font-weight: normal;
+    font-size: 1.5em;
+    text-align: justify;
+    text-align-last: center;
+}
+
+div.content p {
+    font-size: 1.2em;
+    margin-bottom: 1.4em;
+}
+
+div.content p a {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+    transition: all .5s ease;
+}
+
+div.content p a:hover {
+    color: #FF6F39;
+    text-decoration: none;
+}
+
+div.content p a i {
+    margin-left: 6px;
+}
+
+div.content .icons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div.content .icons a {
+    color: #FFF;
+    font-size: 3em;
+    text-decoration: none;
+    transition: all .5s ease;
+}
+
+div.content .icons a:hover {
+    color: #FF6F39;
+}
+
+div.content .icons span {
+    position: absolute;
+    left: -9999999px;
+    visibility: hidden;
+}
+
+div.credits {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #B3B3B3;
+    z-index: 99999;
+}
+
+div.credits > a {
+    color: #FFF;
+    font-weight: bold;
+    transition: all .5s ease;
+    text-decoration: none;
+}
+
+div.credits > a:hover {
+    color: #B3B3B3;
+}
+
+span.highlight {
+    color: #FF6F39;
+}
+
+a.clip-exec > span.clip-stat,
+a.clip-exec:hover > span.clip-stat {
+    color: #FFF;
+}
+
+.fire {
+    animation: animation 1s ease-in-out infinite alternate;
+    -moz-animation: animation 1s ease-in-out infinite alternate;
+    -webkit-animation: animation 1s ease-in-out infinite alternate;
+    -o-animation: animation 1s ease-in-out infinite alternate;
+}
+  
+.burn {
+    animation: animation .65s ease-in-out infinite alternate;
+    -moz-animation: animation .65s ease-in-out infinite alternate;
+    -webkit-animation: animation .65s ease-in-out infinite alternate;
+    -o-animation: animation .65s ease-in-out infinite alternate;
+}
+  
+@keyframes animation {
+    0% {
+        text-shadow: 0 0 20px #fefcc9,
+            10px -10px 30px #feec85,
+            -20px -20px 40px #ffae34,
+            20px -40px 50px #ec760c,
+            -20px -60px 60px #cd4606,
+            0 -80px 70px #973716,
+            10px -90px 80px #451b0e;
+    }
+    100% {
+        text-shadow: 0 0 20px #fefcc9,
+            10px -10px 30px #fefcc9,
+            -20px -20px 40px #feec85,
+            22px -42px 60px #ffae34,
+            -22px -58px 50px #ec760c,
+            0 -82px 80px #cd4606,
+            10px -90px 80px  #973716;
+    }
+}
+  
+@-moz-keyframes animation {
+    0% {
+        text-shadow: 0 0 20px #fefcc9,
+            10px -10px 30px #feec85,
+            -20px -20px 40px #ffae34,
+            20px -40px 50px #ec760c,
+            -20px -60px 60px #cd4606,
+            0 -80px 70px #973716,
+            10px -90px 80px #451b0e;
+    }
+    100% {
+        text-shadow: 0 0 20px #fefcc9,
+            10px -10px 30px #fefcc9,
+            -20px -20px 40px #feec85,
+            22px -42px 60px #ffae34,
+            -22px -58px 50px #ec760c,
+            0 -82px 80px #cd4606,
+            10px -90px 80px  #973716;
+    }
+}
+  
+@-webkit-keyframes animation {
+    0% {
+        text-shadow: 0 0 20px #fefcc9,
+            10px -10px 30px #feec85,
+            -20px -20px 40px #ffae34,
+            20px -40px 50px #ec760c,
+            -20px -60px 60px #cd4606,
+            0 -80px 70px #973716,
+            10px -90px 80px #451b0e;
+    }
+    100% {
+        text-shadow: 0 0 20px #fefcc9,
+            10px -10px 30px #fefcc9,
+            -20px -20px 40px #feec85,
+            22px -42px 60px #ffae34,
+            -22px -58px 50px #ec760c,
+            0 -82px 80px #cd4606,
+            10px -90px 80px  #973716;
+    }
+}
+  
+@-o-keyframes animation {
+    0% {
+        text-shadow: 0 0 20px #fefcc9,
+            10px -10px 30px #feec85,
+            -20px -20px 40px #ffae34,
+            20px -40px 50px #ec760c,
+            -20px -60px 60px #cd4606,
+            0 -80px 70px #973716,
+            10px -90px 80px #451b0e;
+    }
+    100% {
+        text-shadow: 0 0 20px #fefcc9,
+            10px -10px 30px #fefcc9,
+            -20px -20px 40px #feec85,
+            22px -42px 60px #ffae34,
+            -22px -58px 50px #ec760c,
+            0 -82px 80px #cd4606,
+            10px -90px 80px  #973716;
+    }
+}
+
+@media (max-width: 1590px) {
+    div.content {
+        width: 42vw;
+    }
+}
+
+@media (max-width: 1310px) {
+    div.content {
+        width: 50vw;
+    }
+}
+
+@media (max-width: 965px) {
+    div.content {
+        width: 62vw;
+    }
+}
+
+@media (max-width: 760px) {
+    div.content {
+        width: 85vw;
+    }
+
+    div.content h2 {
+        font-size: 1.3em;
+    }
+
+    div.content > .heading > img {
+        height: 120px;
+    }
+
+    div.content > .heading > h1 {
+        font-size: 2.1em;
+    }
+}
